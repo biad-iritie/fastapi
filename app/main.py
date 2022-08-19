@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Body, FastAPI
-import models
-from database import engine
-from routers import post, user, auth, vote
+from . import models
+from .database import engine
+from .routers import post, user, auth, vote
 from fastapi.middleware.cors import CORSMiddleware
 
 # we don't need anymore because of ALEMBIC

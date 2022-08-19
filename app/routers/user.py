@@ -2,11 +2,11 @@ from fastapi import Body, FastAPI, Response, status, HTTPException, Depends, API
 from sqlalchemy.orm import Session
 from typing import List
 
-from database import engine, get_db
-import models
-import schemas
-import utils
-import oauth2
+from ..database import engine, get_db
+from .. import models
+from .. import schemas
+from .. import utils
+from .. import oauth2
 
 router = APIRouter(
     prefix="/users",

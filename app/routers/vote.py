@@ -2,12 +2,12 @@ from fastapi import Body, FastAPI, Response, status, HTTPException, Depends, API
 from sqlalchemy import false
 from sqlalchemy.orm import Session
 from typing import List, Optional
-from database import get_db
+from ..database import get_db
 
-import models
-import schemas
-import oauth2
-import database
+from .. import models
+from .. import schemas
+from .. import oauth2
+from .. import database
 
 router = APIRouter(
     prefix="/vote",
