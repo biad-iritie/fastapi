@@ -32,6 +32,7 @@ class PostResponse(PostBase):
     id: int
     created_at: datetime
     owner_id: int
+    published: bool
     owner: UserResponse
 
     class Config:
