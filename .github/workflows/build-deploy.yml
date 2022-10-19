@@ -7,13 +7,13 @@ jobs:
     environement: 
       name: testing
     env:
-      DATABASE_HOSTNAME: ${{DATABASE_HOSTNAME}}
+      DATABASE_HOSTNAME: ${{secrets.DATABASE_HOSTNAME}}
       DATABASE_PORT: 5432
-      DATABASE_PASSWORD: ${{DATABASE_PASSWORD}}
-      DATABASE_USERNAME: ${{DATABASE_USERNAME}}
+      DATABASE_PASSWORD: ${{secrets.DATABASE_PASSWORD}}
+      DATABASE_USERNAME: ${{secrets.DATABASE_USERNAME}}
       DATABASE_NAME: fastapi
-      SECRET_KEY: ${{SECRET_KEY}}
-      ALGORITHM: ${{ALGORITHM}}
+      SECRET_KEY: ${{secrets.SECRET_KEY}}
+      ALGORITHM: ${{secrets.ALGORITHM}}
       ACCESS_TOKEN_EXPIRE_MINUTES: 30
     runs-on: ubuntu-latest
     steps: 
